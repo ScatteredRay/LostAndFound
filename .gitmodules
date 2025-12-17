@@ -1,0 +1,3 @@
+[submodule "middleware/box2d"]
+	path = middleware/box2d
+	url = https://github.com/erincatto/box2d.git
