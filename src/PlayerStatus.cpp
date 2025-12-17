@@ -14,8 +14,8 @@ void PlayerStatus::TryLoad() {
 			int32_t size = 0;
 			readPod(size);
 			while(size-- > 0) {
-				using setType = std::decay<decltype(data)>::type;
-				setType::value_type item;
+				using setType = typename std::decay<decltype(data)>::type;
+				typename setType::value_type item;
 				readPod(item);
 				data.insert(item);
 			}
@@ -24,8 +24,8 @@ void PlayerStatus::TryLoad() {
 			int32_t size = 0;
 			readPod(size);
 			while(size-- > 0) {
-				using setType = std::decay<decltype(data)>::type;
-				setType::value_type item;
+				using setType = typename std::decay<decltype(data)>::type;
+				typename setType::value_type item;
 				readPod(item);
 				if(std::find(data.begin(), data.end(), item) == data.end()) {
 					data.emplace_back(item);

@@ -2,6 +2,8 @@
 
 #include "Engine/Components/SceneComponent.h"
 
+#include <string>
+
 class RenderTexture;
 
 namespace sf
